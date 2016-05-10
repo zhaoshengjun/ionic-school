@@ -1,0 +1,18 @@
+<ion-navbar *navbar>
+  <ion-title>
+    School List
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+  <ion-list>
+    <button ion-item *ngFor="#school of schools" (click)="showDetails(school)">
+      <ion-avatar item-left>
+        <img src="images/{{school.image}}.png">
+      </ion-avatar>
+      <h2>{{school.name}}</h2>
+      <h3>{{school.location}}</h3>
+      <h4><span class="tag">{{school.types}}</span><span class="tag">{{school.years}}</span></h4>
+    </button>
+  </ion-list>
+</ion-content>

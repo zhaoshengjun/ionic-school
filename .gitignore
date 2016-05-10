@@ -1,0 +1,8 @@
+node_modules/
+www/
+platforms/
+plugins/
+.DS_Store
+resources/
+hooks/
+.vscode/

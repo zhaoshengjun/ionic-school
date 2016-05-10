@@ -1,0 +1,9 @@
+.tag {
+  background-color: #3F51B5;
+  color: white;
+  padding: 0 0.4rem;
+  border-radius: 0.7rem;
+}
+.tag:not(:first-of-type) {
+  margin-left: 1rem;
+}
