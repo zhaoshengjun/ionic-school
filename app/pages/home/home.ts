@@ -1,12 +1,21 @@
-import {Page} from 'ionic-angular';
+import {Page, NavController, NavParams} from 'ionic-angular';
+
+import {SchoolDetailPage} from '../school-detail/school-detail';
 
 @Page({
   templateUrl: 'build/pages/home/home.html'
 })
 export class HomePage {
   schools: Object[];
+  nav: NavController;
   
-  constructor() {
+  constructor(nav: NavController, navParams: NavParams) {
+    this.nav = nav;
+    console.log("navcontroller: ", nav);
+    console.log("navparams: ", navParams);
+    
+    
+    
     this.schools = [
       {
         "id": 1,
@@ -72,10 +81,13 @@ export class HomePage {
         "types": "Private Not-For-Profit",
         "years": "4 Year College"
       }
-    ]
+    ];
   }
   
   showDetails(school) {
-    console.log("Show details for: ",school);
+    // console.log("Show details for: ",school);
+    this.nav.push(SchoolDetailPage, {
+      school: school
+    })
   }
 }
