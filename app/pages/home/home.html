@@ -1,18 +1,31 @@
 <ion-navbar *navbar>
-  <ion-title>
+  <ion-toolbar>
+    <ion-title>
     School List
   </ion-title>
+    <ion-buttons end>
+      <button (click)="showFilters()">
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons> 
+     
+  </ion-toolbar>
+  
 </ion-navbar>
 
-<ion-content class="home">
+<ion-content class="bg-card">
   <ion-list>
-    <button ion-item *ngFor="#school of schools" (click)="showDetails(school)">
-      <ion-avatar item-left>
-        <img src="images/{{school.image}}.png">
-      </ion-avatar>
-      <h2>{{school.name}}</h2>
-      <h3>{{school.location}}</h3>
-      <h4><span class="tag">{{school.types}}</span><span class="tag">{{school.years}}</span></h4>
-    </button>
+      <div class="card" ion-item *ngFor="#school of schools" (click)="showDetails(school)">
+        <img src="images/school-bg.jpg" class="bg-image">
+        <h2 class="card-title">{{school.name}}</h2>
+        <h3 class="card-subtitle">
+          <ion-icon name="navigate"></ion-icon><span class="left-margin">{{school.location}} </span>   
+        </h3>
+        <div class="card-tag">
+          <div class="tag">{{school.types}}</div>
+          <div class="tag">{{school.years}}</div>
+        </div>
+      </div>
+    
   </ion-list>
 </ion-content>

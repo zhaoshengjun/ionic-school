@@ -1,9 +1,50 @@
-.tag {
-  background-color: #3F51B5;
-  color: white;
-  padding: 0 0.4rem;
-  border-radius: 0.7rem;
-}
-.tag:not(:first-of-type) {
-  margin-left: 1rem;
+.bg-card {
+  .bg-image {
+    filter: blur(1px);
+  }
+ 
+  .card {
+    position: relative;
+    text-align: center;
+    // box-shadow: none;
+  }
+  
+  .card-title {
+    position: absolute;
+    top:55%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color:#fff;
+    padding-right: 5vmin;
+  }
+  
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    color:#fff;
+  }
+  
+  .card-tag {
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+  }
+  .tag {
+    background-color: #FF5722;
+    color: white;
+    padding: 0 1.4vmin;
+    border-radius: 1.7vmin;
+    font-size: 2vmin;
+    flex-basis: auto;
+  }
+  .tag:not(:first-of-type) {
+    margin-left: 1vmin;
+  }
+  .left-margin {
+    margin-left:2vmin;
+  }
 }

@@ -1,8 +1,15 @@
 <ion-navbar *navbar>
-    <ion-title>{{school.name}}</ion-title>
+  <ion-title>
+    {{school.name}}
+  </ion-title>
 </ion-navbar>
 
 <ion-content>
-  <ion-title>{{school.location}}</ion-title> 
-  <div id="map"></div> 
+  <ion-card>
+    <img src="images/{{school.image}}.png">
+    <ion-card-content>
+      <ion-card-title>{{school.location}} </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+   
 </ion-content>

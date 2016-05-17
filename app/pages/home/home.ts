@@ -1,6 +1,7 @@
-import {Page, NavController, NavParams} from 'ionic-angular';
+import {Page, NavController, NavParams, Modal} from 'ionic-angular';
 
 import {SchoolDetailPage} from '../school-detail/school-detail';
+import { FilterPage } from '../filter/filter';
 
 @Page({
   templateUrl: 'build/pages/home/home.html'
@@ -85,9 +86,14 @@ export class HomePage {
   }
   
   showDetails(school) {
-    // console.log("Show details for: ",school);
+    console.log("Show details for: ",school);
     this.nav.push(SchoolDetailPage, {
       school: school
     })
+  }
+  
+  showFilters() {
+    let filter = Modal.create(FilterPage);
+    this.nav.present(filter);
   }
 }
